@@ -58,8 +58,6 @@ Andorra	    |Europe	     | 468	    | 64000	        |
 ...
 
 
-
-
 #6. Select the code that would show the countries with an area larger than 50000 and a population smaller than 10000000
 
 SELECT name, area, population
@@ -73,8 +71,6 @@ SELECT name, area, population
 SELECT name, population/area
   FROM world
  WHERE name IN ('China', 'Nigeria', 'France', 'Australia')
-
-
 
 
 
@@ -413,23 +409,4 @@ SELECT name FROM world
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#1. List each country name where the population is larger than that of 'Russia'. world(name, continent, area, population, gdp)
-SELECT name FROM world
-  WHERE population >
-     (SELECT population FROM world
-      WHERE name='Russia')
       
