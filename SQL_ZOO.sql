@@ -395,6 +395,10 @@ SELECT name FROM world
      (SELECT population FROM world
       WHERE name='Romania')
 
+#2. Show the countries in Europe with a per capita GDP greater than 'United Kingdom'.
+
+
+
 
 
 
