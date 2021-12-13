@@ -439,7 +439,18 @@ SELECT name FROM world
 
 
 
+#6. Which countries have a GDP greater than every country in Europe? [Give the name only.] (Some countries may have NULL gdp values)
 
+
+
+
+
+#7. Find the largest country (by area) in each continent, show the continent, the name and the area:
+
+
+
+
+#8. List each continent and the name of the country that comes first alphabetically.
 
 
 
