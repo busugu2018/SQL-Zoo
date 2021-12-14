@@ -453,6 +453,9 @@ SELECT name FROM world
 #8. List each continent and the name of the country that comes first alphabetically.
 
 
+#9. Find the continents where all countries have a population <= 25000000. Then find the names of the countries associated with these continents. Show name, continent and population.
+
+
 
 
 
