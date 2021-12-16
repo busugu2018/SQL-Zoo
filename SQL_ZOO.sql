@@ -401,7 +401,10 @@ SELECT name FROM world
 
 #2. Show the countries in Europe with a per capita GDP greater than 'United Kingdom'.
 
-
+SELECT name FROM world
+  WHERE continent='Europe' AND gdp/population >
+     (SELECT gdp/population FROM world
+      WHERE name='United Kingdom')
 
 
 
@@ -409,6 +412,13 @@ SELECT name FROM world
 
 #3. List the name and continent of countries in the continents containing either Argentina or Australia. Order by name of the country.
 
+SELECT name,continent
+FROM world
+WHERE continent IN (
+  SELECT continent
+  FROM world
+  WHERE name IN ('Australia','Argentina'))
+ORDER BY name
 
 
 
@@ -419,6 +429,11 @@ SELECT name FROM world
 
 #4. Which country has a population that is more than Canada but less than Poland? Show the name and the population.
 
+SELECT name,population FROM world
+WHERE population BETWEEN
+(SELECT population+1 FROM world WHERE name='Canada')
+AND
+(SELECT population-1 FROM world WHERE name='Poland')
 
 
 
@@ -438,9 +453,19 @@ SELECT name FROM world
 #   ...	       ...
 
 
+SELECT name, CONCAT(CAST(ROUND(100*population/(SELECT population FROM world WHERE name = 'Germany'),0) as int), '%')
+FROM world
+WHERE continent = 'Europe'
+
+
 
 #6. Which countries have a GDP greater than every country in Europe? [Give the name only.] (Some countries may have NULL gdp values)
 
+SELECT name FROM world 
+  WHERE gdp > ALL
+   (SELECT gdp FROM world
+    WHERE continent = 'Europe' 
+      AND gdp IS NOT NULL)
 
 
 
