@@ -475,6 +475,8 @@ SELECT name FROM world
 
 
 
+
+
 #8. List each continent and the name of the country that comes first alphabetically.
 
 
