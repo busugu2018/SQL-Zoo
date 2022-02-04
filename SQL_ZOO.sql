@@ -476,6 +476,15 @@ SELECT name FROM world
 </div>
 
 
+#We removed Controls:
+
+<div style="text-align: center;">
+    <video loop="true" autoplay="true" muted="" width="100%">
+        <source src="https://cdn.shopify.com/s/files/1/0618/7961/5743/files/leblakroughassemble3.mp4?v=1643828266" type="video/mp4">
+    </video>
+</div>
+
+
 
 #7. Find the largest country (by area) in each continent, show the continent, the name and the area:
 
