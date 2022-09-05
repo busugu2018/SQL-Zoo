@@ -393,7 +393,7 @@ Physics	    |  1
 SELECT name FROM world
   WHERE population >
      (SELECT population FROM world
-      WHERE name='Romania')
+      WHERE name='Russia')
 
 
 
@@ -491,6 +491,7 @@ SELECT name FROM world
 #7. Find the largest country (by area) in each continent, show the continent, the name and the area:
 
 
+Select country where (Select area )
 
 
 
